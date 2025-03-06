@@ -101,3 +101,17 @@ ggplot(major_counts, aes(x = reorder(Title, -Number_of_Students), y = Number_of_
   labs(title = "Number of Students per Major", x = "Major", y = "Count") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# Average Age by Major
+
+age_major_df <- merged_df %>%
+  group_by(Title) %>%
+  summarise(Average_Age = mean(Age, na.rm = TRUE))
+
+# Average Age of Students by Major
+ggplot(age_major_df, aes(x = reorder(Title, -Average_Age), y = Average_Age)) +
+  geom_bar(stat = "identity", fill = 'steelblue') +
+  labs(title = "Average Age of Students by Major", x = "Major", y = "Average Age") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
