@@ -16,19 +16,21 @@ This project analyzes student enrollment data, including majors, birth years, co
 ### 2. Key Visualizations
 1. **Students per Major**  
    Bar chart showing enrollment distribution across majors.  
-   ![Plot 1 Example](https://via.placeholder.com/400x300/steelblue?text=Major+Distribution)
+   ![Number of Students per Major](https://github.com/kritansth/data332/raw/8fa7359d0fc8bcc7edab99bcf286a505a5b3c29c/student/n_students_per_major.png)
 
 2. **Birth Year Distribution**  
    Histogram of student birth years (2-year bins).  
-   ![Plot 2 Example](https://via.placeholder.com/400x300/darkgreen?text=Birth+Years)
+   ![Birth Year Distribution](https://github.com/kritansth/data332/raw/8fa7359d0fc8bcc7edab99bcf286a505a5b3c29c/student/dist_of_birth_years.png)
+
 
 3. **Cost Analysis**  
    Total cost per major, segmented by payment plan (stacked bars).  
-   ![Plot 3 Example](https://via.placeholder.com/400x300/orange?text=Cost+by+Major)
+   ![Total Cost per Major](https://github.com/kritansth/data332/raw/8fa7359d0fc8bcc7edab99bcf286a505a5b3c29c/student/total_cost_per_major.png)
 
 4. **Balance Due Analysis**  
    Total balance due per major, segmented by payment plan.  
-   ![Plot 4 Example](https://via.placeholder.com/400x300/red?text=Balance+Due)
+   ![Balance Due per Major](https://github.com/kritansth/data332/raw/8fa7359d0fc8bcc7edab99bcf286a505a5b3c29c/student/total_balane_due_per_major.png)
+
 
 ### 3. Summary Statistics
 - Aggregates total costs and balance dues by major/payment plan.
