@@ -1,79 +1,40 @@
-Visualizing Student Data using R Studio
+# Student Enrollment Analysis
 
-Overview
+This project analyzes student enrollment data, including majors, birth years, costs, and balance dues. The analysis is performed using R with the `readxl`, `dplyr`, and `ggplot2` libraries.
 
-This project performs exploratory data analysis and visualization on student majors, registration, and payments using RStudio. The process involves merging datasets, generating visual insights, and summarizing key financial matters.
+## Data Sources
+- **Student Data**: Demographic information (`Student.xlsx`)
+- **Registration Data**: Course registration records (`Registration.xlsx`)
+- **Course Data**: Course details and financial information (`Course.xlsx`)
 
-Datasets
+## Code Overview
 
-Course.xlsx: Contains information on majors offered, their unique IDs, start and end dates, and associated costs.
+### 1. Data Preparation
+- Loads Excel files and merges datasets using `Student ID` and `Instance ID`.
+- Converts `Birth Date` to a numeric `Birth Year` column.
 
-Registration.xlsx: Includes student registration details, total cost, balance due, and payment plan status.
+### 2. Key Visualizations
+1. **Students per Major**  
+   Bar chart showing enrollment distribution across majors.  
+   ![Plot 1 Example](https://via.placeholder.com/400x300/steelblue?text=Major+Distribution)
 
-Student.xlsx: Holds student demographic and contact information.
+2. **Birth Year Distribution**  
+   Histogram of student birth years (2-year bins).  
+   ![Plot 2 Example](https://via.placeholder.com/400x300/darkgreen?text=Birth+Years)
 
-Libraries Used
+3. **Cost Analysis**  
+   Total cost per major, segmented by payment plan (stacked bars).  
+   ![Plot 3 Example](https://via.placeholder.com/400x300/orange?text=Cost+by+Major)
 
-dplyr: Data manipulation
+4. **Balance Due Analysis**  
+   Total balance due per major, segmented by payment plan.  
+   ![Plot 4 Example](https://via.placeholder.com/400x300/red?text=Balance+Due)
 
-ggplot2: Data visualization
+### 3. Summary Statistics
+- Aggregates total costs and balance dues by major/payment plan.
 
-readxl: Reading Excel files
-
-tidyr: Data tidying
-
-scales: Formatting axis labels
-
-lubridate: Handling date-time data
-
-Key Features
-
-Data Merging & Preparation
-
-Merges registration, student, and course data using left joins by Student ID and Instance ID.
-
-Converts birth dates into a usable format and calculates student ages.
-
-Filters out missing age values to ensure data integrity.
-
-Visualizations
-
-Enrollment Trend Over Time: Line graph showing student registration trends over the years.
-
-Gender Distribution Across Majors: Stacked bar chart visualizing the proportion of genders in each major.
-
-Students per Major: Bar chart depicting the number of students enrolled in each major.
-
-Payment Plan Breakdown: Bar chart illustrating the proportion of students using different payment plans.
-
-Total Cost vs. Balance Due: Scatter plot showing financial trends across different majors.
-
-Average Age by Major: Bar chart displaying the average age of students enrolled in each major.
-
-How to Run
-
-Installation
-
-Ensure you have R and the required libraries installed using:
-
-install.packages(c("dplyr", "ggplot2", "readxl", "tidyr", "scales", "lubridate"))
-
-Execution Steps
-
-Place the Course.xlsx, Registration.xlsx, and Student.xlsx files in your working directory.
-
-Run the script in RStudio.
-
-View the generated plots in the RStudio plot pane.
-
-Results
-
-Visualizations provide insights into enrollment trends, financial balances, and student demographics.
-
-Graphs and summaries will be printed in the console and displayed in the plot viewer.
-
-Author
-
-This project was developed to provide clear and insightful student enrollment and financial analysis. The visualizations offer a simple yet effective way to interpret key trends and patterns.
-
-
+## How to Use
+1. **Prerequisites**:  
+   Install required packages:
+   ```R
+   install.packages(c("readxl", "dplyr", "ggplot2"))
