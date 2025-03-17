@@ -63,3 +63,13 @@ This project analyzes patient visit data, billing information, and reasons for v
 - **Walk-in visits** have **higher invoice amounts** than scheduled visits, likely due to more urgent or extensive treatments.
 - Some visit reasons generate **significantly higher invoices**, indicating the need for specialized care.
 - Certain cities/states experience a **higher concentration of specific visit reasons**, which can inform resource allocation.
+
+## How to run
+1. Install the required R libraries using the following commands:
+
+`install.packages(c("dplyr", "ggplot2", "readxl", "tidyr"))`
+
+2. Place the Excel files in your working directory.
+
+3. Run the script file to generate insights and visualizations.
+
