@@ -17,7 +17,8 @@ This project analyzes patient visit and billing data using R, focusing on key in
 
 ## Visualizations
 ### 1. Reason for Visit by Month
-![Reason for Visit by Month](images/reason_by_month.png)
+![Reason for Visit by Month](https://github.com/kritansth/data332/blob/eed7ea0bff8586475bf20cbb3fdd526c0343e6ec/patient_billing/graphs/month.png)
+
 
 ### 2. Walk-in vs Scheduled Visits by Reason
 ![Walk-in vs Scheduled Visits](images/walkin_vs_scheduled.png)
