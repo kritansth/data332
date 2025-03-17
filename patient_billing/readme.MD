@@ -34,16 +34,16 @@ This project analyzes patient visit and billing data using R, focusing on key in
 ## Key Insight
 Walk-in visits tend to have a higher total invoice amount compared to scheduled visits, possibly indicating that walk-in patients require more urgent or extensive care. Some reasons for visits also show significantly higher invoice amounts, suggesting a potential need for specialized treatment.
 
-## Setup & Usage
-1. Install required packages:
-   ```r
-   install.packages(c("ggplot2", "dplyr", "readxl", "tidyverse"))
-   ```
-2. Clone the repository and set your working directory:
-   ```sh
-   git clone https://github.com/yourusername/patient_billing.git
-   cd patient_billing
-   ```
-3. Run the R script:
-   ```r
+## How to Run
+1. Install the required R libraries using the following commands:
 
+`install.packages(c("dplyr", "ggplot2", "readxl", "tidyr"))`
+
+2. Place the Excel files in your working directory.
+
+3. Run the script file to generate insights and visualizations.
+
+## Results
+- Visualizations will be generated and displayed in the RStudio plot pane.
+
+- Summaries will be printed to the console.
