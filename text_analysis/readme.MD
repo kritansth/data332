@@ -1,4 +1,4 @@
-# Consumer Complaints Text Analysis
+# Consumer Complaints Sentiment Text Analysis
 
 ## Author
 - Kritan Shrestha
