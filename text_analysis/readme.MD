@@ -1,5 +1,8 @@
 # Consumer Complaints Text Analysis
 
+## Author
+- Kritan Shrestha
+
 ## Introduction 📌
 This project analyzes consumer complaint narratives using **text mining and sentiment analysis**.  
 We use **Bing and NRC sentiment lexicons** to extract consumer sentiment and generate insights.  
@@ -17,7 +20,7 @@ The dataset consists of consumer complaints from various industries.
 
 ---
 
-## **Data Cleaning **
+## Data Cleaning
 We cleaned the data to ensure accurate analysis:
 1. **Removed missing values** – Ensured only complaints with text are used.
 2. **Lowercased text & removed punctuation** – Standardized format.
@@ -29,3 +32,5 @@ We cleaned the data to ensure accurate analysis:
 df_clean <- df %>% 
   filter(!is.na(Consumer.complaint.narrative) & Consumer.complaint.narrative != "") %>% 
   select(Consumer.complaint.narrative)
+
+
