@@ -22,6 +22,7 @@ The raw data underwent the following preprocessing steps to ensure consistency a
 df_clean <- df %>% 
   filter(!is.na(Consumer.complaint.narrative) & Consumer.complaint.narrative != "")
 ```
+
 2. **Text Standardization** – Removed punctuation, numbers and trimmed extra whitespace. 
 ```r
 df_clean$Consumer.complaint.narrative <- df_clean$Consumer.complaint.narrative %>% 
@@ -29,11 +30,13 @@ df_clean$Consumer.complaint.narrative <- df_clean$Consumer.complaint.narrative %
   str_replace_all("[[:digit:]]", "") %>%  
   str_squish()
 ```
+
 3. **Removed stopwords** – Eliminated common English stopwords (e.g., "the", "and").
 ```r
 df_clean <- df_clean %>% 
   mutate(Consumer.complaint.narrative = removeWords(Consumer.complaint.narrative, stop_words$word))
 ```
+
 4. **Tokenization** – Split complaints into individual words for analysis.
 ```r
 df_tokens <- df_clean %>% 
@@ -45,6 +48,7 @@ df_tokens <- df_clean %>%
 df_tokens <- df_tokens %>% 
   filter(!str_detect(word, "^x+$"))
 ```
+---
 
 ## Data Analysis
 ### 1. **Word Cloud**
@@ -101,6 +105,15 @@ sentiment_nrc <- df_nrc %>%
   inner_join(get_sentiments("nrc")) %>% 
   count(sentiment, sort = TRUE)
 ```
+
+---
+
+## Conclusion
+1. **Word Cloud:** Frequent terms like "credit" and "payment" suggest financial service issues dominate complaints.
+
+2. **Bing Analysis:** Sentiment scores vary significantly, indicating fluctuating consumer satisfaction.
+
+3. **NRC Analysis:** High "anger" and "fear" counts highlight areas needing urgent intervention.
 
 
 
