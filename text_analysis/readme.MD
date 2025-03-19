@@ -10,9 +10,9 @@ We use **Bing and NRC sentiment lexicons** to extract consumer sentiment and gen
 
 ---
 
-## **Data Dictionary **
+## Data Dictionary
 The dataset consists of consumer complaints from various industries.  
-### **Columns Used:**
+### Columns Used:
 1. **Consumer.complaint.narrative** – The raw text of consumer complaints.
 
 ---
