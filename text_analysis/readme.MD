@@ -22,14 +22,27 @@ The raw data underwent the following preprocessing steps to ensure consistency a
 df_clean <- df %>% 
   filter(!is.na(Consumer.complaint.narrative) & Consumer.complaint.narrative != "")
 ```
-2. **Lowercased text & removed punctuation** – Standardized format.
-3. **Removed stopwords** – Focused on meaningful words.
-4. **Tokenized text** – Broke complaints into individual words.
-5. **Filtered unwanted placeholders (e.g., "XXXX")**.
-
+2. **Text Standardization** – Removed punctuation, numbers and trimmed extra whitespace. 
 ```r
-df_clean <- df %>% 
-  filter(!is.na(Consumer.complaint.narrative) & Consumer.complaint.narrative != "") %>% 
-  select(Consumer.complaint.narrative)
+df_clean$Consumer.complaint.narrative <- df_clean$Consumer.complaint.narrative %>% 
+  str_replace_all("[[:punct:]]", "") %>%  
+  str_replace_all("[[:digit:]]", "") %>%  
+  str_squish()
+```
+3. **Removed stopwords** – Eliminated common English stopwords (e.g., "the", "and").
+```r
+df_clean <- df_clean %>% 
+  mutate(Consumer.complaint.narrative = removeWords(Consumer.complaint.narrative, stop_words$word))
+```
+4. **Tokenization** – Split complaints into individual words for analysis.
+```r
+df_tokens <- df_clean %>% 
+  unnest_tokens(word, Consumer.complaint.narrative)
+5. **Filtered unwanted placeholders: Removed placeholder terms like "XXXX".)**.
+```r
+df_tokens <- df_tokens %>% 
+  filter(!str_detect(word, "^x+$"))
+```
+
 
 
