@@ -55,6 +55,7 @@ df_tokens <- df_tokens %>%
 
 #### **Why This Chart?**
 The word cloud highlights the most frequent terms in consumer complaints. Larger words indicate higher frequency, providing a quick visual summary of common issues (e.g., "credit", "account", "payment").
+
 ```r
 wordcloud(words = df_wordcloud$word, min.freq = 50, max.words = 200, 
           colors = brewer.pal(8, "Dark2"), scale = c(3, 0.5))
@@ -65,3 +66,26 @@ wordcloud(words = df_wordcloud$word, min.freq = 50, max.words = 200,
 <div align="center">
 <img src="images/bing_sentiment.png" width="500">
 </div>
+
+#### **Why This Chart?**
+The Bing lexicon categorizes words into positive/negative sentiments. This line chart tracks sentiment scores across grouped complaints, showing how positivity or negativity trends over time.
+
+**Methodology:**
+
+- pivot_wider reshaped the data to calculate sentiment scores (positive - negative).
+
+- Scores are aggregated every 80 complaints to smooth short-term fluctuations.
+
+```r
+sentiment_bing_score <- df_bing %>% 
+  inner_join(get_sentiments("bing")) %>%
+  mutate(index = row_number() %/% 80) %>%
+  count(index, sentiment) %>%
+  pivot_wider(names_from = sentiment, values_from = n, values_fill = 0) %>% 
+  mutate(sentiment_score = positive - negative)
+```
+
+
+
+
+
