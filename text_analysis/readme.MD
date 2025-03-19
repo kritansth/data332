@@ -38,6 +38,8 @@ df_clean <- df_clean %>%
 ```r
 df_tokens <- df_clean %>% 
   unnest_tokens(word, Consumer.complaint.narrative)
+```
+
 5. **Filtered unwanted placeholders: Removed placeholder terms like "XXXX".)**.
 ```r
 df_tokens <- df_tokens %>% 
