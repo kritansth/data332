@@ -115,6 +115,6 @@ sentiment_nrc <- df_nrc %>%
 
 3. **NRC Analysis:** High "anger" and "fear" counts highlight areas needing urgent intervention.
 
-
+----
 
 
