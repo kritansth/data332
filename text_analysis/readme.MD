@@ -4,8 +4,7 @@
 - Kritan Shrestha
 
 ## Introduction 📌
-This project analyzes consumer complaint narratives using **text mining and sentiment analysis**.  
-We use **Bing and NRC sentiment lexicons** to extract consumer sentiment and generate insights.  
+This project analyzes consumer complaints through text analysis techniques, including word cloud visualization and sentiment analysis using Bing and NRC lexicons. The goal is to uncover common themes, sentiment trends, and emotional tones in consumer complaints to derive actionable insights.
 
 <div align="center">
 <img src="images/wordcloud.png" width="500">
