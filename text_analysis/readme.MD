@@ -20,8 +20,11 @@ The dataset consists of consumer complaints from various industries.
 ---
 
 ## Data Cleaning
-We cleaned the data to ensure accurate analysis:
-1. **Removed missing values** – Ensured only complaints with text are used.
+The raw data underwent the following preprocessing steps to ensure consistency and relevance:  
+1. **Removed missing values** –Removed rows with missing or empty complaint narratives.  
+```r
+df_clean <- df %>% 
+  filter(!is.na(Consumer.complaint.narrative) & Consumer.complaint.narrative != "")
 2. **Lowercased text & removed punctuation** – Standardized format.
 3. **Removed stopwords** – Focused on meaningful words.
 4. **Tokenized text** – Broke complaints into individual words.
