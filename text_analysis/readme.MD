@@ -48,5 +48,14 @@ df_tokens <- df_tokens %>%
 
 ## Data Analysis
 ### Word Cloud
+
+<div align="center">
+<img src="images/wordcloud.png" width="500">
+</div>
+
 #### **Why This Chart?**
 The word cloud highlights the most frequent terms in consumer complaints. Larger words indicate higher frequency, providing a quick visual summary of common issues (e.g., "credit", "account", "payment").
+```r
+wordcloud(words = df_wordcloud$word, min.freq = 50, max.words = 200, 
+          colors = brewer.pal(8, "Dark2"), scale = c(3, 0.5))
+```
