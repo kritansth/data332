@@ -47,7 +47,7 @@ df_tokens <- df_tokens %>%
 ```
 
 ## Data Analysis
-### 1. ***Word Cloud***
+### 1. **Word Cloud**
 
 <div align="center">
 <img src="images/wordcloud.png" width="500">
@@ -59,3 +59,9 @@ The word cloud highlights the most frequent terms in consumer complaints. Larger
 wordcloud(words = df_wordcloud$word, min.freq = 50, max.words = 200, 
           colors = brewer.pal(8, "Dark2"), scale = c(3, 0.5))
 ```
+
+### 2. **Bing Sentiment Analysis**
+
+<div align="center">
+<img src="images/bing_sentiment.png" width="500">
+</div>
