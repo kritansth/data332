@@ -127,4 +127,4 @@ sentiment_nrc <- df_nrc %>%
 - **NRC Lexicon**: Captures nuanced emotions (e.g., "anger", "trust") to identify urgent issues.
 - **Word Cloud**: Prioritizes frequency over sentiment to highlight dominant complaint topics.
 
---
+---
