@@ -71,7 +71,6 @@ wordcloud(words = df_wordcloud$word, min.freq = 50, max.words = 200,
 The Bing lexicon categorizes words into positive/negative sentiments. This line chart tracks sentiment scores across grouped complaints, showing how positivity or negativity trends over time.
 
 **Methodology:**
-
 - pivot_wider reshaped the data to calculate sentiment scores (positive - negative).
 
 - Scores are aggregated every 80 complaints to smooth short-term fluctuations.
@@ -85,6 +84,23 @@ sentiment_bing_score <- df_bing %>%
   mutate(sentiment_score = positive - negative)
 ```
 
+### 3. **NRC Sentiment Analysis**
+
+<div align="center">
+<img src="images/nrc_sentiment.png" width="500">
+</div>
+
+#### **Why This Chart?**
+The NRC lexicon categorizes text into emotions (e.g., "anger", "trust", "fear"). This bar chart reveals the emotional tone of complaints.
+
+**Insight:**
+High "anger" or "fear" counts may indicate urgent issues, while "trust" could reflect positive resolutions.
+
+```r
+sentiment_nrc <- df_nrc %>% 
+  inner_join(get_sentiments("nrc")) %>% 
+  count(sentiment, sort = TRUE)
+```
 
 
 
