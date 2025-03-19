@@ -117,4 +117,13 @@ sentiment_nrc <- df_nrc %>%
 
 ----
 
+## Execution
+1. Run 'cleaned_data.R' to preprocess raw data. 
+2. Execute `wordcloud.R`, `bing.R`, and `nrc.R` in any order to generate visualizations.
 
+## Methodology
+- **Bing Lexicon**: Focuses on binary sentiment (positive/negative) for trend analysis.
+- **NRC Lexicon**: Captures nuanced emotions (e.g., "anger", "trust") to identify urgent issues.
+- **Word Cloud**: Prioritizes frequency over sentiment to highlight dominant complaint topics.
+
+--
