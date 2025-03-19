@@ -47,7 +47,7 @@ df_tokens <- df_tokens %>%
 ```
 
 ## Data Analysis
-### Word Cloud
+### 1. ***Word Cloud***
 
 <div align="center">
 <img src="images/wordcloud.png" width="500">
