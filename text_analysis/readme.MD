@@ -118,8 +118,9 @@ sentiment_nrc <- df_nrc %>%
 ----
 
 ## Execution
-1. Run 'cleaned_data.R' to preprocess raw data. 
-2. Execute `wordcloud.R`, `bing.R`, and `nrc.R` in any order to generate visualizations.
+1. Get 'consumer_complaints.csv.zip' from the google drive link 'https://drive.google.com/file/d/1Iz_VFDZZjpMsLMt4eIO24ItJy57ZQM51/view?usp=sharing'  
+2. Run 'cleaned_data.R' to preprocess raw data. 
+3. Execute `wordcloud.R`, `bing.R`, and `nrc.R` in any order to generate visualizations.
 
 ## Methodology
 - **Bing Lexicon**: Focuses on binary sentiment (positive/negative) for trend analysis.
