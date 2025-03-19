@@ -6,10 +6,6 @@
 ## Introduction 📌
 This project analyzes consumer complaints through text analysis techniques, including word cloud visualization and sentiment analysis using Bing and NRC lexicons. The goal is to uncover common themes, sentiment trends, and emotional tones in consumer complaints to derive actionable insights.
 
-<div align="center">
-<img src="images/wordcloud.png" width="500">
-</div>
-
 ---
 
 ## Data Dictionary
@@ -25,6 +21,7 @@ The raw data underwent the following preprocessing steps to ensure consistency a
 ```r
 df_clean <- df %>% 
   filter(!is.na(Consumer.complaint.narrative) & Consumer.complaint.narrative != "")
+```
 2. **Lowercased text & removed punctuation** – Standardized format.
 3. **Removed stopwords** – Focused on meaningful words.
 4. **Tokenized text** – Broke complaints into individual words.
