@@ -46,5 +46,7 @@ df_tokens <- df_tokens %>%
   filter(!str_detect(word, "^x+$"))
 ```
 
-
-
+## Data Analysis
+### Word Cloud
+#### **Why This Chart?**
+The word cloud highlights the most frequent terms in consumer complaints. Larger words indicate higher frequency, providing a quick visual summary of common issues (e.g., "credit", "account", "payment").
