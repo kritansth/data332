@@ -14,7 +14,7 @@
 ### Data Storage & Access:
 All raw Excel sheets live in a public GitHub repository. At app startup we download cars_count.xlsx via its raw‑file URL into a temporary file, then read each sheet with readxl. This ensures the deployed Shiny app always pulls the latest data.
 
-## We built an interactive Shiny application allows you to:
+## We built an interactive Shiny application that allows you to:
 
 - **View histograms** and **summary statistics** (mean, median, min, max) for initial speed, final speed, or speed difference, by dataset.  
 - **Compare** summary statistics across three collection sessions (Aashish, Kritan, Abhib) and the combined dataset.  
