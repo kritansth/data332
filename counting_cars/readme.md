@@ -1,6 +1,6 @@
 # Car Counting and Speed Analysis Project
 
-## 📊 Project Overview
+## Project Overview
 
 This project analyzes vehicle traffic data collected via a road-side speed detector. The primary goal is to process, visualize, and derive meaningful insights from vehicle count and speed data.
 
@@ -10,12 +10,12 @@ Our objectives include:
 - Identifying peak traffic hours
 - Visualizing the distribution of vehicle speeds
 
-## 📁 Project Files
+## Project Files
 
 - `cars_count.xlsx`: The raw dataset containing timestamped records of cars detected along with their speeds.
 - `counting_cars.R`: The main R script used for loading, cleaning, analyzing, and visualizing the data.
 
-## ⚙️ Requirements
+## Requirements
 
 Make sure the following R packages are installed before running the script:
 
@@ -23,7 +23,7 @@ Make sure the following R packages are installed before running the script:
 install.packages(c("readxl", "dplyr", "ggplot2", "lubridate"))
 ```
 
-## ▶️ How to Use
+## How to Use
 1. Clone this repository or download the files.
 2. Open counting_cars.R in RStudio.
 3. Ensure cars_count.xlsx is in the same working directory.
@@ -32,7 +32,7 @@ install.packages(c("readxl", "dplyr", "ggplot2", "lubridate"))
    - Summary statistics
    - Visualization of traffic trends
   
-## 📊 Key Analyses
+## Key Analyses
 - Total Cars Detected: Number of vehicles logged
 - Hourly Breakdown: Cars per hour to detect rush hour
 - Speed Distribution: Average, median, and variance in speed
