@@ -24,14 +24,20 @@ install.packages(c("readxl", "dplyr", "ggplot2", "lubridate"))
 ```
 
 ## ▶️ How to Use
+1. Clone this repository or download the files.
+2. Open counting_cars.R in RStudio.
+3. Ensure cars_count.xlsx is in the same working directory.
+4. Run the script to perform:
+   - Data cleaning
+   - Summary statistics
+   - Visualization of traffic trends
+  
+## 📊 Key Analyses
+- Total Cars Detected: Number of vehicles logged
+- Hourly Breakdown: Cars per hour to detect rush hour
+- Speed Distribution: Average, median, and variance in speed
+- Peak Hours: Identify traffic hotspots based on volume
 
-	1. Clone this repository or download the files.
-	2. Open counting_cars.R in RStudio.
-	3. Ensure cars_count.xlsx is in the same working directory.
-	4. Run the script to perform:
-        •	Data cleaning
-        •	Summary statistics
-        •	Visualization of traffic trends
 
 
         
