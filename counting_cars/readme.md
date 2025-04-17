@@ -12,7 +12,7 @@
 **What**: For each passing vehicle we recorded Initial Speed, Final Speed, computed Difference (Initial – Final), and captured Body Style (Sedan, Truck, SUV).
 
 ### Data Storage & Access:
-All raw Excel sheets live in a public GitHub repository. At app startup we download cars_count.xlsx via its raw‑file URL into a temporary file, then read each sheet with readxl. This ensures the deployed Shiny app always pulls the latest data.
+All raw Excel sheets live in this GitHub repository. At app startup we download cars_count.xlsx via its raw‑file URL into a temporary file, then read each sheet with readxl. This ensures the deployed Shiny app always pulls the latest data.
 
 ## We built an interactive Shiny application that allows you to:
 
