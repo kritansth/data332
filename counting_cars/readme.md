@@ -11,6 +11,8 @@
 
 **What**: For each passing vehicle we recorded Initial Speed, Final Speed, computed Difference (Initial – Final), and captured Body Style (Sedan, Truck, SUV).
 
+**Note**: We ingnored cars that were initially detected on the radar but turned into one of the two turns before passing the radar. There also is a traffic light on 30th Street which may have affected our analysis. 
+
 ### Data Storage & Access:
 All raw Excel sheets live in this GitHub repository. At app startup we download cars_count.xlsx via its raw‑file URL into a temporary file, then read each sheet with readxl. This ensures the deployed Shiny app always pulls the latest data.
 
