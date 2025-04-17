@@ -358,3 +358,7 @@ https://amatya02.shinyapps.io/counting_cars/
 
 - Bar chart of those proportions (with percent axis) to compare “do SUVs actually brake more than Sedans or Trucks?”
 
+## Conclusion
+
+Our analysis shows that collection date and time had no significant effect on vehicle speeds (all ANOVA p‑values > 0.05), so it was valid to merge the three sessions into one dataset. Examining the combined data, SUVs, Sedans, and Trucks each exhibited similar patterns of exceeding the 30 mph limit, and all vehicle types slowed down after passing the radar—demonstrating the radar’s real‑world impact. This Shiny dashboard provides a clear, interactive way to explore these findings and monitor compliance at 30th Street. The charts make it clear that SUVs exceed the speed limit the most out of the three categories we considered for this analysis. In fact, more SUVs have speeds over 30 mph when passing the speed radar than when they were first detected. Lastly, to examine the effectiveness of the radar, we can see that Trucks had the highest proportion of slow down rates at 22% followed by SUV and Sedan at 12% and 9% respectively.  
+
