@@ -1,6 +1,4 @@
-# app.R
-
-# ── Libraries ────────────────────────────────────────────────────────────────
+# Libraries
 library(shiny)
 library(dplyr)
 library(lubridate)
@@ -9,21 +7,21 @@ library(scales)
 library(leaflet)
 library(caret)
 
-# ── Load the combined data ───────────────────────────────────────────────────
+# Load the combined data
 master_url <- "https://raw.githubusercontent.com/kritansth/data332/main/uber/master_data.rds"
 tf <- tempfile(fileext = ".rds")
 download.file(master_url, tf, mode = "wb")
 uber_raw <- readRDS(tf)
 unlink(tf)
 
-# ── Add Week-of-Month for heatmap ─────────────────────────────────────────────
+# Add Week-of-Month for heatmap
 uber_raw <- uber_raw %>% mutate(WeekOfMonth = ceiling(Day/7))
 
-# ── Factor levels for ordered plots ──────────────────────────────────────────
+# Factor levels for ordered plots
 month_levels <- c("Apr","May","Jun","Jul","Aug","Sep")
 wday_levels  <- c("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday")
 
-# ── Train a simple lm predictor ──────────────────────────────────────────────
+# Train a simple lm predictor 
 model_data <- uber_raw %>%
   count(Hour, Wday, Month) %>%
   mutate(
@@ -37,7 +35,7 @@ pred_model <- train(
   method = "lm"
 )
 
-# ── UI ───────────────────────────────────────────────────────────────────────
+# UI
 ui <- fluidPage(
   titlePanel("NYC Uber 2014 Dashboard"),
   tabsetPanel(
@@ -78,7 +76,7 @@ ui <- fluidPage(
   )
 )
 
-# ── Server ───────────────────────────────────────────────────────────────────
+# Server
 server <- function(input, output, session) {
   # 1) Trips Every Hour
   output$plot_hour <- renderPlot({
@@ -239,5 +237,5 @@ server <- function(input, output, session) {
   })
 }
 
-# ── Run the app ──────────────────────────────────────────────────────────────
+# Run the app 
 shinyApp(ui, server)
